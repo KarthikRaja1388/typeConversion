@@ -1,11 +1,20 @@
-function convertStringToNumber(string) {
+let inputElement = document.querySelector(".userInput");
+let btnConvert = document.querySelector(".convert");
+let display = document.querySelector(".display");
+
+function convertStringToNumber() {
+  let userInput = inputElement.value;
   try {
-    let convertedToNumber = parseInt(string);
-    if (isNaN(convertedToNumber)) throw "Invalid number";
-    else return convertedToNumber;
+    let convertedToNumber = parseInt(userInput);
+    if (isNaN(convertedToNumber)) {
+      throw "Invalid number";
+    } else {
+      display.textContent = convertedToNumber;
+      return convertedToNumber;
+    }
   } catch (error) {
-    console.log(error);
+    display.textContent = error;
   }
 }
 
-console.log(convertStringToNumber("123"));
+btnConvert.addEventListener("click", convertStringToNumber);

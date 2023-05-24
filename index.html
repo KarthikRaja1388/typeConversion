@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <title>Type conversion</title>
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+      .userInput {
+        padding: 0.5rem;
+      }
+      a {
+        text-decoration: none;
+        background-color: #262626;
+        color: #fff;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      ><input type="text" class="userInput" placeholder="Enter a string" />
+      <a href="#" class="convert">Convert to Number</a>
+
+      <div class="display"></div>
+    </main>
+  </body>
+</html>
